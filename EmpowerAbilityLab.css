@@ -164,6 +164,11 @@ form input, form textarea {
     border-radius: 20px;
     cursor: pointer;
 }
+label .text-danger {
+    color: #dc3545 !important;
+    font-weight: 600;
+}
+
 
 .switch .slider::before {
     content: "";
