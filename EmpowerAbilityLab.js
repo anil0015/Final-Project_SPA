@@ -147,3 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("communityModal").classList.add("active");
     });
 });
+
+
+// Close modal on ESC key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    const activeModal = document.querySelector(".modal.active");
+    if (activeModal) {
+      activeModal.classList.remove("active");
+    }
+  }
+});
