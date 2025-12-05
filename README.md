@@ -4,7 +4,7 @@ https://anil0015.github.io/Final-Project_SPA/
 **Final Website Project**
 
 ## **Team Members:**  
-- **Akash N V**  
+- **Akash Nadackanal Vinod**  
 - **Ken Biju Jacob**  
 - **Abijith Anil**
 
