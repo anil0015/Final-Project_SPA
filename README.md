@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project Documentation – Final Web Development Project
 
 ## **Project Title:**  
@@ -101,3 +102,6 @@ Throughout this project, we improved our understanding of:
 ### Accessibility Basics  
 - W3C Introduction to Web Accessibility  
   https://www.w3.org/WAI/fundamentals/accessibility-intro/
+=======
+# Final-Project_SPA
+>>>>>>> 2f96555e9479b77f64a74af0924710cfbcb80a8d
