@@ -1,4 +1,3 @@
-// Wait until the DOM is fully loaded before running script
 document.addEventListener("DOMContentLoaded", () => {
   // Select all page sections
   const sections = document.querySelectorAll("section");
@@ -11,10 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile hamburger button
   const navToggle = document.querySelector(".navbar-toggler");
+  // Skip Link
+  document.querySelector(".skip-link").addEventListener("click", (e) => {
+    e.preventDefault();
+    const main = document.getElementById("main-content");
+    main.setAttribute("tabindex", "-1");
+    main.focus();
+  });
 
-  // ---------------------------
   // Show/Hide Sections Function
-  // ---------------------------
+
   function showSection(sectionId) {
     sections.forEach((section) => {
       if (section.id === sectionId) {
@@ -32,9 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---------------------------
   // Highlight Active Nav Link
-  // ---------------------------
   function updateNavState(activeLink) {
     navLinks.forEach((link) => {
       if (link === activeLink) link.classList.add("active-link");
@@ -42,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---------------------------
   // Nav Link Click Events
-  // ---------------------------
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -84,9 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavState(link);
   });
 
-  // ---------------------------
   // Mobile Navigation Toggle
-  // ---------------------------
   navToggle.addEventListener("click", () => {
     // Toggle the "open" class on menu
     const isOpen = navMenu.classList.toggle("open");
@@ -95,9 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.setAttribute("aria-expanded", isOpen);
   });
 
-  // ---------------------------
   // Invite Speaker Checkbox Toggle
-  // ---------------------------
+
   const inviteSpeakerCheckbox = document.getElementById("inviteSpeaker");
   const eventDetailsContainer = document.getElementById(
     "eventDetailsContainer"
@@ -110,9 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : "none";
   });
 
-  // ---------------------------
   // Form Submission Handling
-  // ---------------------------
   const scheduleForm = document.getElementById("scheduleCallForm");
   const emailInput = document.getElementById("email");
 
@@ -135,9 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     eventDetailsContainer.style.display = "none";
   });
 
-  // ---------------------------
   // Close Modal Buttons
-  // ---------------------------
   document.querySelectorAll(".btn-close").forEach((btn) => {
     btn.addEventListener("click", () => {
       // Close the modal that the close button belongs to
@@ -145,9 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ---------------------------
   // Open Community Modal
-  // ---------------------------
+
   document
     .getElementById("meet-empower-community")
     .addEventListener("click", () => {

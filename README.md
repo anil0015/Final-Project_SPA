@@ -5,7 +5,7 @@
 
 ## **Team Members:**  
 - **Akash N V**  
-- **Ken Biju**  
+- **Ken Biju Jacob**  
 - **Abijith Anil**
 
 ---
