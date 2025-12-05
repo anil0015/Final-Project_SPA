@@ -248,3 +248,24 @@ label .text-danger {
     padding: 10px 0;
 }
 
+/* Show hamburger button on smaller screens */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  /* Hide nav menu by default */
+  #mainNavigation {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Show nav menu when toggled */
+  #mainNavigation.open {
+    display: flex;
+  }
+}
