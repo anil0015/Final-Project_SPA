@@ -22,6 +22,8 @@ body {
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #ccc;
+  width: 100%;
+;
 }
 
 .navbar .container {
@@ -102,7 +104,7 @@ section.active {
 .btn,
 .btn-link {
   background: var(--primary);
-  color: #fff;
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
@@ -209,7 +211,7 @@ label .text-danger {
     justify-content: space-between;
     align-items: center;   /* THIS vertically aligns image + text */
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .schedule-intro img {
@@ -217,3 +219,31 @@ label .text-danger {
     height: auto;
     display: block;
 }
+
+.services-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   /* THIS vertically aligns image + text */
+    gap: 10px;
+  
+}
+
+.services-intro img {
+    width: 200px;  /* adjust size as needed */
+    height: auto;
+    display: block;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    margin-top: 10px;
+    border: 2px solid #100f0f;
+    padding: 20px;
+   
+}
+
+.service-item {
+    padding: 10px 0;
+}
+
