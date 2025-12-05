@@ -19,17 +19,33 @@ body {
 }
 
 .navbar {
-  background: #fff;
+  background: #ffffff;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #ccc;
 }
 
 .navbar .container {
+  position: relative;          /* allows absolute logo */
   display: flex;
-  justify-content: space-between; /* logo left, links right */
+  justify-content: center;     /* centers the nav links */
   align-items: center;
   width: 100%;
 }
+
+/* Force the logo to the left */
+.navbar .navbar-brand {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {
+    width: 200px;
+    height: auto;   /* keeps proportions correct */
+}
+
+
 
 .navbar-brand {
   display: flex;
